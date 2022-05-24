@@ -15,7 +15,7 @@ export function checkAuth() {
 
 export function redirectIfLoggedIn() {
     if (getUser()) {
-        location.replace('./other-page');
+        location.replace('./list-page');
     }
 }
 
@@ -44,5 +44,6 @@ function checkError({ data, error }) {
 // To Get All Supabase Elements from Workshops
 export async function getWorkshops() {
     const response = await client.from('workshops').select('*, participants(*)');
+    await console.log(response);
     return checkError(response);
 }
