@@ -8,15 +8,4 @@ logOut.addEventListener('click', () => {
 });
 
 async function renderWorkshop() {
-    const data = await getWorkshops();
-    workShopList.textContent = '';
-
-    for (let workshop of data) {
-        const workshopDiv = document.createElement('h4');
-        workshopDiv.setAttribute('class', 'workshop-div');
-
-
-    }
 }
-
-getWorkshops();
