@@ -1,4 +1,4 @@
-import { checkAuth, logout } from '../fetch-utils.js';
+import { checkAuth, logout, createParticipant } from '../fetch-utils.js';
 
 checkAuth();
 
@@ -13,4 +13,6 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const participantForm = new FormData(form);
     console.log(participantForm.get('create-name'));
+
+    await createParticipant({}); // Continue from Here
 });
