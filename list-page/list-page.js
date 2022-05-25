@@ -28,7 +28,6 @@ export async function renderWorkShops() {
             ul.append(participantName);
         }
 
-
         workShopsContainer.append(workShopDiv);
         workShopDiv.append(h3, ul);
     }

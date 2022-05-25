@@ -7,3 +7,5 @@ const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
     logout();
 });
+
+console.log('This Page is Correctly Linked');
