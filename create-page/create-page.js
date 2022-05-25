@@ -14,8 +14,8 @@ form.addEventListener('submit', async (e) => {
     const participantForm = new FormData(form);
     console.log(participantForm.get('create-name'));
 
-    await createParticipant({ name: participantForm.get('create-name'), contact_info: participantForm.get('create-contact'), workshop_id: participantForm.get('choose-workshop') });
-    location.replace('../list-page');
+    await createParticipant({ name: participantForm.get('create-name'), contact_info: participantForm.get('contact-info'), workshop_id: participantForm.get('choose-workshop') });
+    `location.replace('../list-page');`
     form.reset();
 });
 
