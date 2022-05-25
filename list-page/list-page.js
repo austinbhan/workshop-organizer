@@ -2,6 +2,11 @@ import { getWorkshops, logout } from '../fetch-utils.js';
 
 const workShopsContainer = document.querySelector('.workshops-container');
 const logOut = document.getElementById('logout');
+const createButton = document.getElementById('create-button');
+
+createButton.addEventListener('click', () => {
+    location.replace('../create-page');
+});
 
 logOut.addEventListener('click', () => {
     logout();
