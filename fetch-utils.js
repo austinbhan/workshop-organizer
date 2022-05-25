@@ -49,6 +49,6 @@ export async function getWorkshops() {
 }
 
 export async function createParticipant(participant) {
-    const response = await client.from('workshops').insert(participant);
+    const response = await client.from('participants').insert(participant);
     return checkError(response);
 }

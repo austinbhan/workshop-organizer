@@ -12,10 +12,10 @@ logoutButton.addEventListener('click', () => {
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const participantForm = new FormData(form);
-    console.log(participantForm.get('create-name'));
+    console.log(participantForm.get('create-name'), participantForm.get('contact-info'), participantForm.get('choose-workshop'));
 
     await createParticipant({ name: participantForm.get('create-name'), contact_info: participantForm.get('contact-info'), workshop_id: participantForm.get('choose-workshop') });
-    `location.replace('../list-page');`
+    // Complete from Here
     form.reset();
 });
 
