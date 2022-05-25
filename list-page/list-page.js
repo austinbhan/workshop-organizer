@@ -25,7 +25,10 @@ export async function renderWorkShops() {
         for (let participant of workshop.participants) {
             const participantName = document.createElement('li');
             participantName.textContent = participant.name;
-            ul.append(participantName);
+            
+            const participantContact = document.createElement('li');
+            participantContact.textContent = participant.contact_info;
+            ul.append(participantName, participantContact);
         }
 
         workShopsContainer.append(workShopDiv);
