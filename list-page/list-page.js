@@ -7,7 +7,7 @@ logOut.addEventListener('click', () => {
     logout();
 });
 
-export async function renderWorkshops() {
+export async function renderWorkShops() {
     workShopsContainer.textContent = '';
     const data = await getWorkshops();
 
@@ -22,8 +22,15 @@ export async function renderWorkshops() {
         const ul = document.createElement('ul');
         ul.setAttribute('class', 'participants');
 
+        for (let participant of workshop.participants) {
+            const participantName = document.createElement('li');
+            participantName.textContent = participant.name;
+            ul.append(participantName);
+        }
+
+
         workShopsContainer.append(workShopDiv);
         workShopDiv.append(h3, ul);
     }
 }
-renderWorkshops();
+renderWorkShops();
