@@ -54,6 +54,6 @@ export async function createParticipant(participant) {
 
 // Delete Participant from Table
 export async function deleteParticipant(participant) {
-    const response = await client.from('participants').delete().eq('id', participant);
+    const response = await client.from('participants').delete().eq('id', participant.id);
     return checkError(response);
 }

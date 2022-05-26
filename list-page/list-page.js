@@ -1,4 +1,4 @@
-import { getWorkshops, logout } from '../fetch-utils.js';
+import { getWorkshops, logout, deleteParticipant } from '../fetch-utils.js';
 
 const workShopsContainer = document.querySelector('.workshops-container');
 const logOut = document.getElementById('logout');
@@ -40,6 +40,11 @@ export async function renderWorkShops() {
 
             participantDiv.append(participantName, participantContact);
             ul.append(participantDiv);
+
+            participantDiv.addEventListener('click', () => {
+                deleteParticipant(participant);
+                renderWorkShops();
+            });
         }
 
         workShopsContainer.append(workShopDiv);
