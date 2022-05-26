@@ -4,6 +4,11 @@ checkAuth();
 
 const logoutButton = document.getElementById('logout');
 const form = document.querySelector('.create-form');
+const listPageShortcut = document.getElementById('list-page-shortcut');
+
+listPageShortcut.addEventListener('click', () => {
+    location.replace('../list-page');
+});
 
 logoutButton.addEventListener('click', () => {
     logout();
