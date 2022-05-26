@@ -19,14 +19,30 @@
             <img src="../assets/big-logo.png" />
         </div>
     </header>    
+    <button id="list-page-shortcut">Back to List Page</button>
     <button id="logout">Logout</button>
     <main>
-        <h1>You are logged in!</h1>
+        <h2>Create Participant Page</h2>
+        <form class="create-form">
+            <label>
+                Choose Their Name:
+                <input id="create-name" name="create-name">
+            </label>
+            <label>
+                Choose Their Contact:
+                <input id="contact-info" name="contact-info">
+            </label>
+            <label>
+                Choose Their Workshop:
+                <select id="choose-workshop" name="choose-workshop"></select>
+            </label>
+            <button>Submit</button>
+        </form>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
-    <script type="module" src="./other-page.js"></script>
+    <script type="module" src="./create-page.js"></script>
 </body>
 
 </html>
