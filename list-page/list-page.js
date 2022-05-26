@@ -28,12 +28,18 @@ export async function renderWorkShops() {
         ul.setAttribute('class', 'participants');
 
         for (let participant of workshop.participants) {
+
+            const participantDiv = document.createElement('div');
+            participantDiv.setAttribute('class', 'participant-div');
+
             const participantName = document.createElement('li');
             participantName.textContent = participant.name;
             
             const participantContact = document.createElement('li');
             participantContact.textContent = participant.contact_info;
-            ul.append(participantName, participantContact);
+
+            participantDiv.append(participantName, participantContact);
+            ul.append(participantDiv);
         }
 
         workShopsContainer.append(workShopDiv);

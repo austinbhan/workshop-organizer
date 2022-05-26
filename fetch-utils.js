@@ -41,7 +41,6 @@ function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
 
-// To Get All Supabase Elements from Workshops
 export async function getWorkshops() {
     const response = await client.from('workshops').select('*, participants(*)');
     await console.log(response);
@@ -50,5 +49,11 @@ export async function getWorkshops() {
 
 export async function createParticipant(participant) {
     const response = await client.from('participants').insert(participant);
+    return checkError(response);
+}
+
+// Delete Participant from Table
+export async function deleteParticipant(participant) {
+    const response = await client.from('participants').delete().eq('id', participant);
     return checkError(response);
 }
